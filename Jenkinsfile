@@ -1,14 +1,14 @@
 pipeline {
-  agent{
-    docker{
-      image "node:8-alpine"
+  agent {
+    docker {
+      image "node:12-alpine"
     }
   }
   stages {
-    stage("Build"){
-      steps{
+    stage("Build") {
+      steps {
         sh "npm install"
-     }
+      }
     }
   }
 }
